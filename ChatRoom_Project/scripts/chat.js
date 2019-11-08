@@ -46,18 +46,11 @@ class Chatroom {
   }
 }
 
-const chatroom_instance = new Chatroom("general", "shaun");
-console.log(chatroom_instance);
-
-chatroom_instance.getChats(data => {
-  console.log(data);
-});
-
-setTimeout(() => {
-  chatroom_instance.updateRoom("gaming");
-  chatroom_instance.updateName("Sumoz");
-  chatroom_instance.getChats(data => {
-    console.log(data);
-  });
-  chatroom_instance.addChat("hello");
-}, 3000);
+// setTimeout(() => {
+//   chatroom_instance.updateRoom("gaming");
+//   chatroom_instance.updateName("Sumoz");
+//   chatroom_instance.getChats(data => {
+//     console.log(data);
+//   });
+//   chatroom_instance.addChat("hello");
+// }, 3000);
