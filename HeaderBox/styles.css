@@ -1,153 +1,280 @@
-body {
-    margin: 0;
-    padding: 0;
+html {
+  box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+}
 .header-wrapper {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid #000;
-    padding: 20px 20px;
-    background: #1e1e1e;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #000;
+  padding: 5px 20px;
+  background: #1e1e1e;
 }
 
 .header-left {
-    /* border: 1px solid #000; */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    /* background: #1e1e1e; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-
 .home-button {
-    background: transparent;
-    outline: none;
-    border: none;
-    color: #007acc;
-    font-size: 30px;
-    padding: 10px 20px;
-    cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #007acc;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.home-icon {
+  padding: 0px 20px;
 }
 
 .project-name {
-    background: #3c3c3c;
-    color: #fff;
-    padding: 10px 120px 10px 10px;
-    font-size: 26px;
-    text-align: left;
+  background: #3c3c3c;
+  color: #fff;
+  padding: 2px 120px 2px 10px;
+  font-size: 18px;
+  text-align: left;
 }
 
 .newpage-button {
-    background: #007acc;
-    color: #fff;
-    outline: none;
-    border: none;
-    margin: 0 0 0 20px;
+  background: #007acc;
+  color: #fff;
+  outline: none;
+  border: none;
+  margin: 0px 0 0px 20px;
+  padding: 5px 0px;
+  cursor: pointer;
 }
 
 .newpage-icon {
-    padding: 0 10px;
-    font-size: 20px;
+  padding: 0 10px;
+  font-size: 16px;
 }
 
 .newpage-content {
-    padding: 0 30px 0 10px;
-    font-size: 24px;
-    text-align: center;
+  padding: 0 30px 0 10px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .pages-label {
-    background: transparent;
-    color: #fff;
-    padding: 10px 20px 10px 30px;
-    font-size: 26px;
-    text-align: left;
+  background: transparent;
+  color: #fff;
+  padding: 10px 20px 10px 30px;
+  font-size: 20px;
+  text-align: left;
 }
 
 .page-selection {
-    padding: 10px 40px 10px 10px;
-    font-size: 26px;
-    outline: none;
-    color: #fff;
-    background: #3c3c3c;
-    border: none;
+  padding: 5px 40px 5px 10px;
+  font-size: 16px;
+  outline: none;
+  color: #fff;
+  background: #3c3c3c;
+  border: none;
+  width: 160px !important;
 }
 
 /* Right Header starts here */
 .header-right {
-    /* border: 1px solid #000; */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .mode-label {
-    background: transparent;
-    color: #fff;
-    padding: 10px 20px 10px 30px;
-    font-size: 26px;
-    text-align: left;
+  background: transparent;
+  color: #fff;
+  padding: 10px 20px 10px 30px;
+  font-size: 20px;
+  text-align: left;
 }
 
 .edit-button {
-    color: #fff;
-    outline: none;
-    border: none;
-    padding: 0 30px 0 30px;
-    font-size: 24px;
-    text-align: center;
-    background: #3c3c3c;
-    cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  padding: 5px 25px 5px 25px;
+  font-size: 16px;
+  text-align: center;
+  background: #3c3c3c;
+  cursor: pointer;
 }
 
 .edit-button:hover {
-    background: #007acc;
+  background: #007acc;
 }
 
 .view-button:hover {
-    background: #007acc;
+  background: #007acc;
 }
 
 .view-button {
-    color: #fff;
-    outline: none;
-    border: none;
-    margin: 0 20px 0 10px;
-    padding: 0 30px 0 30px;
-    font-size: 24px;
-    text-align: center;
-    background: #3c3c3c;
-    cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  margin: 0 20px 0 10px;
+  padding: 5px 25px 5px 25px;
+  font-size: 16px;
+  text-align: center;
+  background: #3c3c3c;
+  cursor: pointer;
 }
 
 .download-button {
-    background: transparent;
-    outline: none;
-    border: none;
-    color: #007acc;
-    font-size: 30px;
-    padding: 10px 20px;
-    cursor: pointer;
+  background: transparent;
+  outline: none;
+  border: none;
+  color: #007acc;
+  font-size: 20px;
+  cursor: pointer;
 }
 
+.download-icon {
+  padding: 0px 20px;
+}
 
 .save-button {
-    background: #007acc;
-    color: #fff;
-    outline: none;
-    border: none;
-    margin: 0 20px 0 20px;
-    cursor: pointer;
+  background: #007acc;
+  color: #fff;
+  outline: none;
+  border: none;
+  margin: 0px 20px 0px 20px;
+  padding: 5px 0;
+  cursor: pointer;
 }
 
 .save-icon {
-    padding: 0 10px;
-    font-size: 20px;
+  padding: 0 10px;
+  font-size: 18px;
 }
 
 .save-content {
-    padding: 0 30px 0 10px;
-    font-size: 24px;
-    text-align: center;
+  padding: 0px 30px 0px 10px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.side-panel-container {
+  position: relative;
+  flex: 1;
+}
+
+.side-panel-wrapper {
+  width: 400px;
+  right: -400px;
+  height: 100%;
+  position: absolute;
+  color: #fff;
+  background: #252526;
+  background-size: cover;
+  overflow: auto;
+  transition: right 0.5s cubic-bezier(0, 0, 0, 1);
+}
+
+.checkbox:checked ~ .side-panel-container .side-panel-wrapper {
+  right: 0px;
+}
+
+.element-type-container {
+  padding: 20px 20px;
+}
+
+.properties-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.properties-header {
+  background: #3c3c3c;
+  padding: 5px 20px;
+}
+
+.button-name-label {
+  align-self: flex-start;
+  padding: 20px 10px 10px 20px;
+}
+
+.input-name {
+  color: #fff;
+  background: #3c3c3c;
+  outline: none;
+  border: none;
+  width: 90%;
+  margin-left: 20px;
+  padding: 4px 5px;
+}
+
+.style-name-label {
+  align-self: flex-start;
+  padding: 20px 10px 10px 20px;
+}
+
+.style-selection {
+  width: 90%;
+  padding: 4px 5px;
+  color: #fff;
+  outline: none;
+  border: none;
+  background: #3c3c3c;
+  margin-left: 20px;
+  margin-bottom: 50px;
+}
+
+/* action Container */
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.actions-header {
+  background: #3c3c3c;
+  padding: 5px 20px;
+}
+
+.interaction-label {
+  align-self: flex-start;
+  padding: 20px 10px 10px 20px;
+}
+
+.interaction-selection {
+  width: 90%;
+  padding: 4px 5px;
+  color: #fff;
+  outline: none;
+  border: none;
+  background: #3c3c3c;
+  margin-left: 20px;
+}
+
+.action-label {
+  align-self: flex-start;
+  padding: 20px 10px 10px 20px;
+}
+
+.action-selection {
+  width: 90%;
+  padding: 4px 5px;
+  color: #fff;
+  outline: none;
+  border: none;
+  background: #3c3c3c;
+  margin-left: 20px;
+}
+
+.actions-container {
+  display: flex;
+  flex-direction: column;
 }
