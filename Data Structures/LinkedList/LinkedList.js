@@ -1,41 +1,72 @@
-class Node{
-    constructor(data){
-        this.data= data;
-        this.next = null;
-    }
+class Node {
+  constructor(data) {
+    this.data = data;
+    this.next = null;
+  }
 }
 
-class LinkedList{
-    constructor(){
-        this.head = null;
+class LinkedList {
+  constructor() {
+    this.head = null;
+    this.size = 0;
+  }
+
+  // Adding the node at the of the List
+  addEndOfList(nodeValue) {
+    let newNode = new Node(nodeValue);
+
+    let current = this.head;
+
+    if (current) {
+      while (current.next) {
+        current = current.next;
+      }
+      current.next = newNode;
+    } else {
+      this.head = newNode;
     }
+    this.size++;
+  }
 
-    addEndOfList(nodeValue){
-        let newNode = new Node(nodeValue);
+  // Displaying all the nodes available in the LinkedList
+  display() {
+    let current = this.head;
 
-        let current = this.head;
-
-        if(current){
-            while(current.next){
-                    current = current.next;
-            }
-            current.next = newNode;
-        }
-        else{
-            this.head = newNode;
-        }
+    while (current) {
+      console.log("Current node is ", current.data);
+      current = current.next;
     }
+  }
 
-    display(){
-        let current = this.head;
+  // Insert Node at a given Index
+  insertIndex(element, index) {
+    console.log("size is", this.size);
+    if (index > 0 && index > this.size) {
+      return false;
+    } else {
+      let newNode = new Node(element);
+      let prev, current;
 
-        while(current){
-            console.log('Current node is ',current.data);
-            current = current.next;
+      current = this.head;
+
+      if (index === 0) {
+        newNode.next = current;
+        this.head = newNode;
+      } else {
+        let i = 0;
+        current = this.head;
+        while (i < index) {
+          prev = current;
+          current = current.next;
+          i++;
         }
+        newNode.next = current;
+        prev.next = newNode;
+      }
     }
+    this.size++;
+  }
 }
-
 
 let obj = new LinkedList();
 obj.addEndOfList(1);
@@ -43,5 +74,6 @@ obj.addEndOfList(2);
 obj.addEndOfList(3);
 obj.addEndOfList(4);
 
-obj.display()
+obj.insertIndex(5, 3);
 
+obj.display();
