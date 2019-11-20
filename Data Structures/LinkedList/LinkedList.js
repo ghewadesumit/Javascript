@@ -63,17 +63,65 @@ class LinkedList {
         newNode.next = current;
         prev.next = newNode;
       }
+      this.size++;
+      console.log("Node Added");
     }
-    this.size++;
+  }
+
+  deleteNode(index) {
+    if (index > this.size) return false;
+    else {
+      let current, prev;
+      current = this.head;
+      if (index === 0) nodecurrent = current.next;
+      else {
+        let i = 0;
+        while (i < index) {
+          prev = current;
+          current = current.next;
+          i++;
+        }
+
+        prev.next = current.next;
+      }
+      this.size--;
+      console.log("Node deleted ", current.data);
+    }
+  }
+
+  deleteElement(element) {
+    let current,
+      prev,
+      i = 0;
+
+    current = this.head;
+    if (current.data === element) {
+      this.head = current.next;
+      this.size--;
+    } else {
+      while (current.data !== element) {
+        prev = current;
+        current = current.next;
+        i++;
+      }
+      if (i === this.size) {
+        console.log("Element not found");
+      } else {
+        prev.next = current.next;
+        this.size--;
+      }
+    }
   }
 }
 
 let obj = new LinkedList();
-obj.addEndOfList(1);
-obj.addEndOfList(2);
-obj.addEndOfList(3);
-obj.addEndOfList(4);
+obj.addEndOfList("a");
+obj.addEndOfList("b");
+obj.addEndOfList("c");
+obj.addEndOfList("d");
 
-obj.insertIndex(5, 3);
+obj.insertIndex("e", 3);
+// obj.deleteNode(4);
+obj.deleteElement("a");
 
 obj.display();
