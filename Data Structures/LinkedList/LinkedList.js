@@ -68,6 +68,7 @@ class LinkedList {
     }
   }
 
+  // delete a node by provided index
   deleteNode(index) {
     if (index > this.size) return false;
     else {
@@ -89,6 +90,7 @@ class LinkedList {
     }
   }
 
+  // delete a node by its name
   deleteElement(element) {
     let current,
       prev,
@@ -112,6 +114,30 @@ class LinkedList {
       }
     }
   }
+
+  //Helper method
+  // Find the index of the given element
+  indexOf(element) {
+    let current = this.head;
+    let i = 0;
+
+    while (current) {
+      if (current.data === element) {
+        return i;
+      }
+      current = current.next;
+      i++;
+    }
+    return "Element not found";
+  }
+
+  isEmpty() {
+    return this.size === 0;
+  }
+
+  sizeOfList() {
+    return this.size;
+  }
 }
 
 let obj = new LinkedList();
@@ -119,9 +145,12 @@ obj.addEndOfList("a");
 obj.addEndOfList("b");
 obj.addEndOfList("c");
 obj.addEndOfList("d");
-
-obj.insertIndex("e", 3);
+obj.addEndOfList("e");
+// obj.insertIndex("e", 3);
+console.log(obj.sizeOfList());
 // obj.deleteNode(4);
-obj.deleteElement("a");
+// obj.deleteElement("a");
+
+console.log("message is", obj.indexOf("f"));
 
 obj.display();
