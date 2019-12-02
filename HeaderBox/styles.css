@@ -15,8 +15,10 @@ body {
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: 1px solid #000;
-  padding: 5px 20px;
+  padding: 0px 26px;
+  height: 40px;
   background: #1e1e1e;
 }
 
@@ -30,55 +32,64 @@ body {
   background: transparent;
   outline: none;
   border: none;
-  color: #007acc;
-  font-size: 20px;
+  color: #fff;
+  font-size: 14px;
   cursor: pointer;
+  /* border: 1px solid #fff; */
+  margin: 0 11px 0 0;
 }
 
+.home-button:hover {
+  color: #007acc;
+}
 .home-icon {
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
 }
 
 .project-name {
-  background: #3c3c3c;
+  background: transparent;
   color: #fff;
   padding: 2px 120px 2px 10px;
-  font-size: 18px;
+  font-size: 14px;
   text-align: left;
-}
-
-.newpage-button {
-  background: #007acc;
-  color: #fff;
   outline: none;
   border: none;
-  margin: 0px 0 0px 20px;
-  padding: 5px 0px;
+  border-left: 1px solid #3c3c3c;
+}
+
+.proto-button {
+  background: transparent;
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+  margin: 0px 0 0px 0px;
+  /* padding: 5px 0px; */
   cursor: pointer;
+  font-size: 14px;
 }
 
-.newpage-icon {
-  padding: 0 10px;
-  font-size: 16px;
+.proto-button-icon {
+  padding: 6px 0px 6px 14px;
 }
 
-.newpage-content {
-  padding: 0 30px 0 10px;
-  font-size: 16px;
+.proto-button-content {
+  padding: 7px 14px 7px 9px;
   text-align: center;
+  font-weight: normal;
+  letter-spacing: 0px;
 }
 
 .pages-label {
   background: transparent;
   color: #fff;
-  padding: 10px 20px 10px 30px;
-  font-size: 20px;
-  text-align: left;
+  padding: 5px 20px;
+  font-size: 14px;
+  border-left: 1px solid #3c3c3c;
 }
 
 .page-selection {
-  padding: 5px 40px 5px 10px;
-  font-size: 16px;
+  padding: 2px 40px 2px 10px;
+  font-size: 14px;
   outline: none;
   color: #fff;
   background: #3c3c3c;
