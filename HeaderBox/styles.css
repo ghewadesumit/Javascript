@@ -133,9 +133,95 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
+/* LeftSide Panel */
+.leftside-panel-wrapper {
+  width: 200px;
+  left: -200px;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  color: #fff;
+  background: #252526;
+  background-size: cover;
+  transition: left 0.5s cubic-bezier(0, 0, 0, 1);
+}
+
+.leftside-panel-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftside-panel-content {
+  width: 187px;
+  height: 100%;
+  direction: rtl;
+  overflow: auto;
+}
+
+.leftside-header {
+  background: #252526;
+  color: #fff;
+  height: 26px;
+  padding-top: 14px;
+  padding-left: 18px;
+}
+
+.leftside-outline {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(204, 204, 204);
+}
+.leftside-outline-btn {
+  margin-left: 50px;
+  background: transparent;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.leftside-outline-btn:hover {
+  color: #0075e3;
+}
+
+.leftside-wireframe-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 127px;
+  background: #252526;
+}
+
+.leftside-wireframe-tile:hover {
+  background: #3c3c3c;
+}
+.leftside-wireframe-tile:hover .leftside-wireframe-tile-image {
+  border: 2px solid #488028;
+}
+
+.leftside-wireframe-tile-image {
+  width: 150px;
+  height: 90px;
+  background: #fff;
+  border: 2px solid transparent;
+}
+
+.leftside-wireframe-tile-header {
+  font-size: 11px;
+  font-weight: normal;
+  text-align: center;
+  color: rgb(204, 204, 204);
+}
+
+/* Right Side Panel */
 .side-panel-container {
   position: relative;
   flex: 1;
+  overflow: hidden;
   display: flex;
 }
 
@@ -152,14 +238,13 @@ body {
 .side-panel-wrapper {
   width: 400px;
   right: -400px;
-  /* right: 0px; */
   height: 100%;
   position: absolute;
   display: flex;
   color: #fff;
   background: #252526;
   background-size: cover;
-  overflow: auto;
+  /* overflow: auto; */
   transition: right 0.5s cubic-bezier(0, 0, 0, 1);
 }
 
@@ -169,6 +254,10 @@ body {
 
 .checkbox:checked ~ .side-panel-container .side-panel-wrapper {
   right: 0px;
+}
+
+.checkbox:checked ~ .side-panel-container .leftside-panel-wrapper {
+  left: 0px;
 }
 
 .element-type-container {
