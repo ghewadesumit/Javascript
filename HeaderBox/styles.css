@@ -15,8 +15,10 @@ body {
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: 1px solid #000;
-  padding: 5px 20px;
+  padding: 0px 26px;
+  height: 40px;
   background: #1e1e1e;
 }
 
@@ -30,55 +32,94 @@ body {
   background: transparent;
   outline: none;
   border: none;
-  color: #007acc;
-  font-size: 20px;
+  color: #fff;
+  font-size: 14px;
   cursor: pointer;
+  margin: 0 11px 0 0;
 }
 
+.home-button:hover {
+  color: #007acc;
+}
 .home-icon {
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
 }
 
 .project-name {
-  background: #3c3c3c;
+  background: transparent;
   color: #fff;
   padding: 2px 120px 2px 10px;
-  font-size: 18px;
+  font-size: 14px;
   text-align: left;
-}
-
-.newpage-button {
-  background: #007acc;
-  color: #fff;
   outline: none;
   border: none;
-  margin: 0px 0 0px 20px;
-  padding: 5px 0px;
+  border-left: 1px solid #3c3c3c;
+}
+
+.proto-button-holder {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+}
+
+.proto-button {
+  background: transparent;
+  color: rgb(255, 255, 255);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.proto-button-icon {
+  padding: 6px 0px 6px 14px;
+}
+
+.proto-button-content {
+  padding: 7px 14px 7px 9px;
+  text-align: center;
+  font-weight: normal;
+  letter-spacing: 0px;
+}
+
+.proto-button-dropdown {
+  display: block;
+  position: absolute;
+  background-color: #27292a;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.proto-button-dropdown a {
+  color: #fff;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+}
+
+.proto-button-dropdown a:hover {
+  background: #007acc;
   cursor: pointer;
 }
 
-.newpage-icon {
-  padding: 0 10px;
-  font-size: 16px;
-}
-
-.newpage-content {
-  padding: 0 30px 0 10px;
-  font-size: 16px;
-  text-align: center;
+.show {
+  display: block;
 }
 
 .pages-label {
   background: transparent;
   color: #fff;
-  padding: 10px 20px 10px 30px;
-  font-size: 20px;
-  text-align: left;
+  padding: 5px 20px;
+  font-size: 14px;
+  border-left: 1px solid #3c3c3c;
 }
 
 .page-selection {
-  padding: 5px 40px 5px 10px;
-  font-size: 16px;
+  padding: 2px 40px 2px 10px;
+  font-size: 14px;
   outline: none;
   color: #fff;
   background: #3c3c3c;
@@ -93,82 +134,105 @@ body {
   align-items: center;
 }
 
-.mode-label {
+/* LeftSide Panel */
+.leftside-panel-wrapper {
+  width: 200px;
+  left: -200px;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  color: #fff;
+  background: #252526;
+  background-size: cover;
+  transition: left 0.5s cubic-bezier(0, 0, 0, 1);
+}
+
+.leftside-panel-content-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.leftside-panel-content {
+  width: 187px;
+  height: 100%;
+  direction: rtl;
+  overflow: auto;
+}
+
+.leftside-header {
+  background: #252526;
+  color: #fff;
+  height: 26px;
+  padding-top: 14px;
+  padding-left: 18px;
+}
+
+.leftside-outline {
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(204, 204, 204);
+}
+.leftside-outline-btn {
+  margin-left: 50px;
   background: transparent;
   color: #fff;
-  padding: 10px 20px 10px 30px;
-  font-size: 20px;
-  text-align: left;
-}
-
-.edit-button {
-  color: #fff;
   outline: none;
   border: none;
-  padding: 5px 25px 5px 25px;
-  font-size: 16px;
-  text-align: center;
+  cursor: pointer;
+}
+
+.leftside-outline-btn:hover {
+  color: #0075e3;
+}
+
+.leftside-wireframe-tile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 127px;
+  background: #252526;
+}
+
+.leftside-wireframe-tile:hover {
   background: #3c3c3c;
-  cursor: pointer;
+}
+.leftside-wireframe-tile:hover .leftside-wireframe-tile-image {
+  border: 2px solid #488028;
 }
 
-.edit-button:hover {
-  background: #007acc;
+.leftside-wireframe-tile-image {
+  width: 150px;
+  height: 90px;
+  background: #fff;
+  border: 2px solid transparent;
 }
 
-.view-button:hover {
-  background: #007acc;
-}
-
-.view-button {
-  color: #fff;
-  outline: none;
-  border: none;
-  margin: 0 20px 0 10px;
-  padding: 5px 25px 5px 25px;
-  font-size: 16px;
+.leftside-wireframe-tile-header {
+  font-size: 11px;
+  font-weight: normal;
   text-align: center;
-  background: #3c3c3c;
-  cursor: pointer;
+  color: rgb(204, 204, 204);
 }
 
-.download-button {
-  background: transparent;
-  outline: none;
-  border: none;
-  color: #007acc;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.download-icon {
-  padding: 0px 20px;
-}
-
-.save-button {
-  background: #007acc;
-  color: #fff;
-  outline: none;
-  border: none;
-  margin: 0px 20px 0px 20px;
-  padding: 5px 0;
-  cursor: pointer;
-}
-
-.save-icon {
-  padding: 0 10px;
-  font-size: 18px;
-}
-
-.save-content {
-  padding: 0px 30px 0px 10px;
-  font-size: 16px;
-  text-align: center;
-}
-
+/* Right Side Panel */
 .side-panel-container {
   position: relative;
   flex: 1;
+  overflow: hidden;
+  display: flex;
+}
+
+.side-panel-close {
+  width: 13px;
+  height: 100%;
+  background: rgb(64, 64, 64);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .side-panel-wrapper {
@@ -176,15 +240,24 @@ body {
   right: -400px;
   height: 100%;
   position: absolute;
+  display: flex;
   color: #fff;
   background: #252526;
   background-size: cover;
-  overflow: auto;
+  /* overflow: auto; */
   transition: right 0.5s cubic-bezier(0, 0, 0, 1);
+}
+
+.side-panel-content {
+  width: calc(387px);
 }
 
 .checkbox:checked ~ .side-panel-container .side-panel-wrapper {
   right: 0px;
+}
+
+.checkbox:checked ~ .side-panel-container .leftside-panel-wrapper {
+  left: 0px;
 }
 
 .element-type-container {
